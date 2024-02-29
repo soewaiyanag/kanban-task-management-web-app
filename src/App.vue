@@ -1,5 +1,7 @@
-<script setup></script>
+<script setup>
+import Button from 'primevue/button';
+</script>
 
 <template>
-  <h1 class="heading-xl text-center">Hello, World!</h1>
+  <Button outlined>Click Me!</Button>
 </template>

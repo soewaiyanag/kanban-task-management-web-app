@@ -28,7 +28,7 @@ watch(checked, (newValue) => {
     <label class="cursor-pointer">
       <input type="checkbox" v-model="checked" class="peer sr-only" />
       <div
-        class="after:border-bg-purple-heart dark:border-bg-purple-heart peer-checked:bg-blue-600 peer relative h-6 w-11 rounded-full bg-purple-heart after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-white after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full dark:bg-purple-heart"
+        class="after:border-bg-purple-heart dark:border-bg-purple-heart peer-checked:bg-blue-600 peer relative h-6 w-11 rounded-full bg-purple-heart after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-white after:bg-white after:transition-all after:ease-in-out after:content-[''] peer-checked:after:translate-x-full dark:bg-purple-heart"
       ></div>
     </label>
     <img

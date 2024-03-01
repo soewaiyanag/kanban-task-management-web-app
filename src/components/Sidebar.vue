@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import HideSidebarIcon from './Icons/HideSidebarIcon.vue';
 import BoardMenu from './BoardMenu.vue';
 import ThemeSwitcher from './ThemeSwitcher.vue';
 
@@ -35,10 +36,8 @@ const handleTransitionEnd = () => {
         class="group my-8 -ml-12 flex items-center gap-4 text-nowrap rounded-r-3xl py-3.5 pl-12 text-left transition-colors hover:bg-purple-heart/10"
         @click="hideSlide"
       >
-        <img
-          class="h-5 w-5"
-          src="/assets/icons/icon-hide-sidebar.svg"
-          alt="hide sidebar"
+        <HideSidebarIcon
+          class="fill-battleship-grey group-hover:fill-purple-heart"
         />
         <span
           class="font-semibold text-battleship-grey group-hover:text-purple-heart"
@@ -47,7 +46,7 @@ const handleTransitionEnd = () => {
       </button>
     </div>
     <button
-      class="absolute bottom-8 left-0 flex w-14 justify-center rounded-r-3xl bg-purple-heart py-5"
+      class="absolute bottom-8 left-0 flex w-14 animate-[slideRight_1s_cubic-bezier(0.22,0.68,0,1)_1] justify-center rounded-r-3xl bg-purple-heart py-5 transition-all hover:bg-lavender-blue"
       v-show="showSlideOpen"
       @click="showSlide"
     >

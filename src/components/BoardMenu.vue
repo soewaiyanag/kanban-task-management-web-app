@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import BoardIcon from './BoardIcon.vue';
+import BoardIcon from './Icons/BoardIcon.vue';
 
 const boards = ref([]);
 const activeBoard = ref(0);
@@ -22,17 +22,21 @@ onMounted(fetchBoards);
     <ul>
       <li
         v-for="({ name }, index) in boards"
-        class="cursor-pointer font-semibold transition-colors"
+        class="group cursor-pointer font-semibold transition-colors"
         :class="{
           '-ml-12 flex items-center gap-3 rounded-r-3xl bg-purple-heart py-3.5 pl-12 text-white':
             activeBoard === index,
-          '-ml-12 flex items-center gap-3 rounded-r-3xl py-4 pl-12 text-battleship-grey hover:bg-purple-heart/10 hover:text-purple-heart':
+          '-ml-12 flex items-center gap-3 rounded-r-3xl py-3.5 pl-12 text-battleship-grey hover:bg-purple-heart/10 hover:text-purple-heart':
             activeBoard !== index,
         }"
         @click="activeBoard = index"
       >
         <BoardIcon
-          :fill="activeBoard === index ? 'white' : 'var(--battleship-grey)'"
+          :class="
+            activeBoard === index
+              ? 'fill-white'
+              : 'fill-battleship-grey group-hover:fill-purple-heart'
+          "
         />
         {{ name }}
       </li>

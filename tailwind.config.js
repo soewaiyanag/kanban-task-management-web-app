@@ -29,6 +29,15 @@ export default {
         'surface-900': 'rgb(var(--surface-900))',
         'surface-950': 'rgb(var(--surface-950))',
       },
+      animation: {
+        slideRight: 'slideRight 1s cubic-bezier(0.4, 0, 0.6, 1) 1',
+      },
+      keyframes: {
+        slideRight: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
     },
     colors: {
       'purple-heart': '#635FC7',

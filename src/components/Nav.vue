@@ -1,17 +1,31 @@
 <script setup>
 import Button from './Button.vue';
+import { useThemeStore } from '../stores/theme';
+
+const theme = useThemeStore();
 </script>
 
 <template>
   <nav
-    class="flex min-h-24 items-stretch space-x-8 border-b border-alice-blue bg-white px-6"
+    class="flex min-h-24 items-stretch space-x-8 border-b border-battleship-grey bg-white px-6 dark:bg-charcoal"
   >
-    <picture class="flex md:min-w-64 md:border-r md:border-r-alice-blue">
-      <source media="(min-width: 768px)" srcset="/assets/icons/logo-dark.svg" />
+    <picture class="flex md:min-w-64 md:border-r md:border-r-battleship-grey">
+      <source
+        media="(min-width: 768px)"
+        :srcset="
+          theme.isDarkTheme
+            ? '/assets/icons/logo-light.svg'
+            : '/assets/icons/logo-dark.svg'
+        "
+      />
       <img class="my-auto" src="/assets/icons/logo-mobile.svg" alt="logo" />
     </picture>
     <div class="flex w-full items-center justify-between">
-      <h1 class="text-xl font-semibold md:text-2xl">Platform Launch</h1>
+      <h1
+        class="text-xl font-semibold text-midnight md:text-2xl dark:text-white"
+      >
+        Platform Launch
+      </h1>
       <div class="flex items-center gap-4">
         <Button>
           <img

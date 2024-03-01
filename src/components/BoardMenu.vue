@@ -24,7 +24,7 @@ onMounted(fetchBoards);
         v-for="({ name }, index) in boards"
         class="cursor-pointer font-semibold transition-colors"
         :class="{
-          '-ml-12 flex items-center gap-3 rounded-r-3xl bg-purple-heart py-4 pl-12 text-white':
+          '-ml-12 flex items-center gap-3 rounded-r-3xl bg-purple-heart py-3.5 pl-12 text-white':
             activeBoard === index,
           '-ml-12 flex items-center gap-3 rounded-r-3xl py-4 pl-12 text-battleship-grey hover:bg-purple-heart/10 hover:text-purple-heart':
             activeBoard !== index,

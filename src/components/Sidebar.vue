@@ -25,14 +25,14 @@ const handleTransitionEnd = () => {
 <template>
   <div class="justify-content-center relative min-h-full">
     <div
-      class="flex min-h-[calc(100vh-6rem)] flex-col overflow-hidden bg-white transition-all duration-300"
+      class="-mt-px flex min-h-[calc(100vh-6rem+1px)] flex-col overflow-hidden border-r border-r-battleship-grey border-t-charcoal bg-white transition-all duration-300 dark:bg-charcoal"
       :class="visible ? 'w-[17.5rem] px-6 opacity-100' : 'w-0 opacity-0'"
       @transitionend="handleTransitionEnd"
     >
       <BoardMenu />
       <ThemeSwitcher class="mt-auto" />
       <button
-        class="my-8 flex items-center gap-4 text-nowrap text-left"
+        class="group my-8 -ml-12 flex items-center gap-4 text-nowrap rounded-r-3xl py-3.5 pl-12 text-left transition-colors hover:bg-purple-heart/10"
         @click="hideSlide"
       >
         <img
@@ -40,11 +40,14 @@ const handleTransitionEnd = () => {
           src="/assets/icons/icon-hide-sidebar.svg"
           alt="hide sidebar"
         />
-        <span class="font-semibold text-battleship-grey">Hide Sidebar</span>
+        <span
+          class="font-semibold text-battleship-grey group-hover:text-purple-heart"
+          >Hide Sidebar</span
+        >
       </button>
     </div>
     <button
-      class="absolute bottom-4 left-0 flex w-14 justify-center rounded-r-3xl bg-purple-heart py-5"
+      class="absolute bottom-8 left-0 flex w-14 justify-center rounded-r-3xl bg-purple-heart py-5"
       v-show="showSlideOpen"
       @click="showSlide"
     >

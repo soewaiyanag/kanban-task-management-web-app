@@ -1,7 +1,11 @@
 <script setup>
-import Button from 'primevue/button';
+import Nav from './components/Nav.vue';
+import Sidebar from './components/Sidebar.vue';
 </script>
 
 <template>
-  <Button outlined>Click Me!</Button>
+  <div class="bg-baby-blue">
+    <Nav />
+    <Sidebar class="hidden md:flex" />
+  </div>
 </template>

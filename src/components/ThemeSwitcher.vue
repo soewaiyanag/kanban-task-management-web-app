@@ -22,7 +22,7 @@ watch(checked, (newValue) => {
   >
     <img
       class="aspect-square h-5"
-      src="/public/assets/icons/icon-light-theme.svg"
+      src="/assets/icons/icon-light-theme.svg"
       alt="light theme"
     />
     <label class="cursor-pointer">
@@ -33,7 +33,7 @@ watch(checked, (newValue) => {
     </label>
     <img
       class="aspect-square h-4"
-      src="/public/assets/icons/icon-dark-theme.svg"
+      src="/assets/icons/icon-dark-theme.svg"
       alt="light theme"
     />
   </div>

@@ -1,11 +1,15 @@
 <script setup>
 import Nav from './components/Nav.vue';
 import Sidebar from './components/Sidebar.vue';
+import Columns from './components/Columns.vue';
 </script>
 
 <template>
-  <div class="bg-baby-blue transition-colors dark:bg-gunmetal">
-    <Nav />
-    <Sidebar class="hidden md:flex" />
-  </div>
+    <div class="bg-baby-blue transition-colors dark:bg-gunmetal">
+        <Nav />
+        <div class="grid grid-cols-1 md:grid-cols-[auto_1fr]">
+            <Sidebar class="hidden md:flex" />
+            <Columns />
+        </div>
+    </div>
 </template>

@@ -24,9 +24,11 @@ const handleTransitionEnd = () => {
 </script>
 
 <template>
-    <div class="justify-content-center relative min-h-full max-w-fit">
+    <div
+        class="justify-content-center sticky top-[calc(100vh-6rem+1px)] min-h-[calc(100vh-6rem+1px)]"
+    >
         <div
-            class="-mt-px flex min-h-[calc(100vh-6rem+1px)] flex-col overflow-hidden border-r border-r-battleship-grey border-t-charcoal bg-white transition-all duration-300 dark:bg-charcoal"
+            class="-mt-px flex min-h-full flex-col overflow-hidden border-r border-r-battleship-grey border-t-charcoal bg-white transition-all duration-300 dark:bg-charcoal"
             :class="visible ? 'w-[17.5rem] px-6 opacity-100' : 'w-0 opacity-0'"
             @transitionend="handleTransitionEnd"
         >

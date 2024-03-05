@@ -1,7 +1,7 @@
 <script setup>
-import BoardIcon from './Icons/BoardIcon.vue';
-import { useBoardStore } from '@/stores/board';
 import { storeToRefs } from 'pinia';
+import { useBoardStore } from '@/stores/board';
+import BoardIcon from './Icons/BoardIcon.vue';
 
 const { boardNames, currentBoardIndex } = storeToRefs(useBoardStore());
 </script>

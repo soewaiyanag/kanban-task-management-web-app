@@ -1,6 +1,6 @@
 <script setup>
 import Task from './Task.vue';
-defineProps(['tasks']);
+defineProps(['name', 'tasks']);
 </script>
 
 <template>

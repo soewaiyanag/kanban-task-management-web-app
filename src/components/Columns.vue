@@ -11,7 +11,7 @@ const { currentBoard } = storeToRefs(useBoardStore());
         class="grid max-h-[calc(100vh-6rem+1px)] min-w-[calc(100vw-18rem)] max-w-[100vw] grid-flow-col justify-start gap-5 overflow-scroll p-6"
     >
         <Column
-            v-for="({ tasks }, index) in currentBoard.columns"
+            v-for="({ name, tasks }, index) in currentBoard.columns"
             :key="index"
             :tasks
         />

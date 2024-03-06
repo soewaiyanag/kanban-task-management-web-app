@@ -10,10 +10,10 @@ const { boardNames, currentBoardIndex } = storeToRefs(useBoardStore());
 
 <template>
     <nav
-        class="flex min-h-24 items-stretch space-x-8 border-b border-battleship-grey bg-white px-6 dark:bg-charcoal"
+        class="flex min-h-24 items-stretch space-x-8 border-b border-alice-blue bg-white px-6 dark:border-outer-space dark:bg-charcoal"
     >
         <picture
-            class="flex md:min-w-64 md:border-r md:border-r-battleship-grey"
+            class="flex md:min-w-64 md:border-r md:border-r-alice-blue md:dark:border-r-outer-space"
         >
             <source
                 media="(min-width: 768px)"

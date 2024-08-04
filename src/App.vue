@@ -5,11 +5,11 @@ import Columns from './components/Columns.vue';
 </script>
 
 <template>
-    <div class="relative bg-baby-blue transition-colors dark:bg-gunmetal">
-        <Nav />
-        <div class="grid grid-cols-1 md:grid-cols-[auto_1fr]">
-            <Sidebar class="hidden md:flex" />
-            <Columns />
-        </div>
+  <div class="relative bg-baby-blue transition-colors dark:bg-gunmetal">
+    <Nav />
+    <div class="grid grid-cols-1 md:grid-cols-[auto_1fr]">
+      <Sidebar class="hidden md:flex" />
+      <Columns />
     </div>
+  </div>
 </template>

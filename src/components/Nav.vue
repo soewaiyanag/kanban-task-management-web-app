@@ -1,11 +1,13 @@
 <script setup>
 import Button from './Button.vue';
-import { useThemeStore } from '../stores/theme';
+import { useThemeStore } from '@/stores/theme';
 import { useBoardStore } from '@/stores/board';
 import { storeToRefs } from 'pinia';
+import { ref } from 'vue';
 
 const theme = useThemeStore();
 const { boardNames, currentBoardIndex } = storeToRefs(useBoardStore());
+const isBoardMenuOpen = ref(false);
 </script>
 
 <template>
@@ -30,11 +32,22 @@ const { boardNames, currentBoardIndex } = storeToRefs(useBoardStore());
             />
         </picture>
         <div class="flex w-full items-center justify-between">
-            <h1
-                class="text-xl font-semibold text-midnight dark:text-white md:text-2xl"
-            >
-                {{ boardNames[currentBoardIndex] }}
-            </h1>
+            <div class="flex items-center gap-3">
+                <h1
+                    class="text-xl font-semibold text-midnight dark:text-white md:text-2xl"
+                >
+                    {{ boardNames[currentBoardIndex] }}
+                </h1>
+                <img
+                    :src="
+                        isBoardMenuOpen
+                            ? '/assets/icons/icon-chevron-up.svg'
+                            : '/assets/icons/icon-chevron-down.svg'
+                    "
+                    alt="open or hide board menu"
+                    class="mt-1 h-2.5 w-3.5 md:hidden"
+                />
+            </div>
             <div class="flex items-center gap-4">
                 <Button>
                     <img

@@ -7,7 +7,7 @@ const { boardNames, currentBoardIndex } = storeToRefs(useBoardStore());
 </script>
 
 <template>
-    <div class="text-nowrap pt-6">
+    <div class="whitespace-nowrap text-nowrap pt-6">
         <h2 class="mb-4 text-base font-normal uppercase text-battleship-grey">
             All Boards ({{ boardNames.length }})
         </h2>

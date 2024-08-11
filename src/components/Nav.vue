@@ -12,22 +12,21 @@ const theme = useTheme();
 // States
 const { boardNames, currentBoardIndex } = storeToRefs(boardStore);
 const isBoardMenuOpen = ref(false);
+
+// Computed
+const isDarkTheme = computed(() => theme.currentTheme === 'dark');
 </script>
 
 <template>
   <nav
-    class="flex min-h-24 items-stretch space-x-8 border-b border-alice-blue bg-white px-6 dark:border-outer-space dark:bg-charcoal"
+    class="flex min-h-24 items-stretch space-x-8 border-b border-alice-blue bg-white px-6 duration-200 dark:border-outer-space dark:bg-charcoal"
   >
     <picture
       class="flex md:min-w-64 md:border-r md:border-r-alice-blue md:dark:border-r-outer-space"
     >
       <source
         media="(min-width: 768px)"
-        :srcset="
-          theme.currentTheme === 'dark'
-            ? '/assets/icons/logo-light.svg'
-            : '/assets/icons/logo-dark.svg'
-        "
+        :srcset="isDarkTheme ? '/assets/icons/logo-light.svg' : '/assets/icons/logo-dark.svg'"
       />
       <img class="my-auto" src="/assets/icons/logo-mobile.svg" alt="logo" />
     </picture>

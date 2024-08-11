@@ -3,7 +3,11 @@ import { storeToRefs } from 'pinia';
 import { useBoardStore } from '@/stores/board';
 import Column from './Column.vue';
 
-const { currentBoard } = storeToRefs(useBoardStore());
+// composables
+const boardStore = useBoardStore();
+
+// states
+const { currentBoard } = storeToRefs(boardStore);
 </script>
 
 <template>
